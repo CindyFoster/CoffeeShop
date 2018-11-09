@@ -5,8 +5,6 @@ namespace CoffeeShop.DAL
 {
     public class ActionLogDAL : IActionLogDAL
     {
-        //TODO add to source control.
-        //TODO: making a change so it shows up in source control!
         private RestaurantDBConnection dbConnection;
         private SqlConnection sqlConnection;
 
