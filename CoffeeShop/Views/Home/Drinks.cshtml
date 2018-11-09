@@ -1,0 +1,24 @@
+﻿@inherits CoffeeShop.Pages.MyBasePage
+@{
+    ViewBag.Title = "Browse Drinks";
+}
+<div>
+    @this.MessageService.Message
+    <br />
+    <img alt="@this.MessageService.Message" src="@this.MessageService.ImageUrl" />
+</div>
+<div class="drinks">
+    <h3>
+        <em>Drinks we can make</em>
+    </h3>
+
+    <ul id="drink-list">
+        @foreach (var drink in Model.GetDrinks())
+        {
+            <li>
+                @drink.Name
+            </li>
+        }
+    </ul>
+
+</div>
