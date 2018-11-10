@@ -8,6 +8,12 @@ namespace CoffeeShop.DAL
         private RestaurantDBConnection dbConnection;
         private SqlConnection sqlConnection;
 
+        /*public ActionLogDAL(RestaurantDBConnection dbc, SqlConnection sqlc)
+        {
+            this.dbConnection = dbc;
+            this.sqlConnection = sqlc;
+        }
+        */
         public DataTable GetDataTable(string storedProc)
         {
             dbConnection = new RestaurantDBConnection();

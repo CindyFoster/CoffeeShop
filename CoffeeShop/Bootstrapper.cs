@@ -5,6 +5,8 @@ using CoffeeShop.Controllers;
 using CoffeeShop.Services;
 using CoffeeShop.Factories;
 using CoffeeShop.Filters;
+using CoffeeShop.Models;
+using CoffeeShop.DAL;
 
 namespace CoffeeShop
 {
@@ -50,6 +52,8 @@ namespace CoffeeShop
 
             container.RegisterInstance<IFilterProvider>("FilterProvider", new FilterProvider(container));
             container.RegisterInstance<IActionFilter>("LogActionFilter", new TraceActionFilter());
+
+            container.RegisterType<IActionLogDAL, ActionLogDAL>();
 
             return container;
         }
